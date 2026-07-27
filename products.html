@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  JIUZHOU MOTORCYCLES — BIKES PAGE — WORKING DRAFT
+  ============================================================
+  PLACEHOLDER CONTENT — replace before launch:
+  - All model names (JZ Hauler 200, JZ Rider 125, etc.), specs,
+    descriptions and prices below are FICTIONAL placeholders,
+    written to show how the layout works. Replace with the real
+    lineup once confirmed.
+  - Every "photo" is an SVG icon, not a real product photo.
+    Swap the icons inside .dossier-gallery-main / .dossier-thumbs
+    and .bike-media for real images once available.
+  - WhatsApp links point to a dummy number: +256 700 000 000
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Bikes — Jiuzhou Motorcycles</title>
+<meta name="description" content="Browse Jiuzhou Motorcycles' full range of cargo tricycles, passenger tuktuks and two-wheel motorcycles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header>
+  <div class="utility-bar">
+    <div class="wrap utility-bar-inner">
+      <div class="u-links">
+        <a href="tel:+256700000000">+256 700 000 000</a>
+        <span class="u-hide-mobile">Mon – Sat, 8:00 AM – 6:00 PM</span>
+      </div>
+      <div class="u-links">
+        <span class="u-hide-mobile">Kampala, Uganda</span>
+        <a href="index.html#contact">Visit Our Yard</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">
+      <span class="word">JIUZHOU<span>·</span>MOTO</span>
+      <span class="sub">TRICYCLES &amp; MOTORCYCLES — UGANDA</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="current">Bikes</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-red" href="https://wa.me/256755444375" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <span class="eyebrow reveal">FULL LINEUP</span>
+    <h1 class="reveal" style="margin-top:10px;">Our Bikes</h1>
+    <p class="reveal">Tap any model to see full specs and gallery. Availability changes often — message us on WhatsApp to confirm stock.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="filter-bar reveal">
+      <div class="toggle-group" role="tablist" aria-label="Filter bikes">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="tricycle">Tricycles</button>
+        <button data-filter="motorcycle">Two-Wheelers</button>
+      </div>
+      <span class="result-count mono" id="resultCount">6 MODELS SHOWN</span>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+
+      <!-- ===== JZ Hauler 200 ===== -->
+      <div class="catalog-card reveal" data-id="hauler-200" data-type="tricycle">
+        <div class="bike-media">
+          <span class="bike-badge">Popular</span>
+          <img src="https://placehold.co/600x420/1D4438/F4F0E4?font=montserrat&text=JZ+Hauler+200" alt="JZ Hauler 200 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">CARGO TRICYCLE &middot; TUKTUK</span>
+          <h3>JZ Hauler 200</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>200cc</strong></div>
+            <div>Load<strong>800kg</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-hauler-200" data-for="hauler-200">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/1D4438/F4F0E4?font=montserrat&text=JZ+Hauler+200" alt="JZ Hauler 200 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Front" alt="JZ Hauler 200 front view"></button>
+                <button><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Side" alt="JZ Hauler 200 side view"></button>
+                <button><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Cargo+Bed" alt="JZ Hauler 200 cargo bed view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">CARGO TRICYCLE &middot; TUKTUK</span>
+              <h3>JZ Hauler 200</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">Our heavy-duty cargo tricycle, built for businesses that move goods daily. Strong frame, high load capacity and a fuel-efficient engine make it a dependable workhorse for markets, deliveries and small transport businesses.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2340mm x 1180mm x 1450mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1780mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>180mm</td></tr>
+                  <tr><td>Curb Mass</td><td>245kg</td></tr>
+                  <tr><td>Max Load Mass (incl. rider)</td><td>800kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>200ml</td></tr>
+                  <tr><td>Starter</td><td>Kickstart / Electric start</td></tr>
+                  <tr><td>Max Power</td><td>9.8kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>2.6L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>75km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>4.6m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 4.00-8 / Rear 4.00-8</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>12L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>1000ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Hauler 200?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== JZ Hauler 175 ===== -->
+      <div class="catalog-card reveal" data-id="hauler-175" data-type="tricycle">
+        <div class="bike-media">
+          <img src="https://placehold.co/600x420/2E5C78/F4F0E4?font=montserrat&text=JZ+Hauler+175" alt="JZ Hauler 175 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">CARGO TRICYCLE &middot; TUKTUK</span>
+          <h3>JZ Hauler 175</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>175cc</strong></div>
+            <div>Load<strong>650kg</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-hauler-175" data-for="hauler-175">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/2E5C78/F4F0E4?font=montserrat&text=JZ+Hauler+175" alt="JZ Hauler 175 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Front" alt="JZ Hauler 175 front view"></button>
+                <button><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Side" alt="JZ Hauler 175 side view"></button>
+                <button><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Cargo+Bed" alt="JZ Hauler 175 cargo bed view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">CARGO TRICYCLE &middot; TUKTUK</span>
+              <h3>JZ Hauler 175</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">A lighter cargo tricycle that's easier on fuel while still handling a solid daily load — a good fit for smaller businesses just getting started.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2280mm x 1150mm x 1420mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1720mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>175mm</td></tr>
+                  <tr><td>Curb Mass</td><td>225kg</td></tr>
+                  <tr><td>Max Load Mass (incl. rider)</td><td>650kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>175ml</td></tr>
+                  <tr><td>Starter</td><td>Kickstart / Electric start</td></tr>
+                  <tr><td>Max Power</td><td>8.2kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>2.3L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>70km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>4.4m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 4.00-8 / Rear 4.00-8</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>11L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>1000ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Hauler 175?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== JZ Runner 150 ===== -->
+      <div class="catalog-card reveal" data-id="runner-150" data-type="tricycle">
+        <div class="bike-media">
+          <span class="bike-badge">New</span>
+          <img src="https://placehold.co/600x420/C1402E/F4F0E4?font=montserrat&text=JZ+Runner+150" alt="JZ Runner 150 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">PASSENGER TRICYCLE &middot; TUKTUK</span>
+          <h3>JZ Runner 150</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>150cc</strong></div>
+            <div>Seats<strong>3</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-runner-150" data-for="runner-150">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/C1402E/F4F0E4?font=montserrat&text=JZ+Runner+150" alt="JZ Runner 150 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Front" alt="JZ Runner 150 front view"></button>
+                <button><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Side" alt="JZ Runner 150 side view"></button>
+                <button><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Cabin" alt="JZ Runner 150 cabin view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">PASSENGER TRICYCLE &middot; TUKTUK</span>
+              <h3>JZ Runner 150</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">Built for passenger routes, with room for three riders and a comfortable cab. A practical choice for short-distance transport businesses.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2260mm x 1160mm x 1650mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1700mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>170mm</td></tr>
+                  <tr><td>Curb Mass</td><td>230kg</td></tr>
+                  <tr><td>Max Load Mass (incl. riders)</td><td>420kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>150ml</td></tr>
+                  <tr><td>Starter</td><td>Kickstart / Electric start</td></tr>
+                  <tr><td>Max Power</td><td>7.5kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>2.1L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>65km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>4.2m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 4.00-8 / Rear 4.00-8</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>10L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>900ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Runner 150?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== JZ Rider 125 ===== -->
+      <div class="catalog-card reveal" data-id="rider-125" data-type="motorcycle">
+        <div class="bike-media">
+          <span class="bike-badge">New</span>
+          <img src="https://placehold.co/600x420/2E5C78/F4F0E4?font=montserrat&text=JZ+Rider+125" alt="JZ Rider 125 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">TWO-WHEELER &middot; COMMUTER</span>
+          <h3>JZ Rider 125</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>125cc</strong></div>
+            <div>Tank<strong>13L</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-rider-125" data-for="rider-125">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/2E5C78/F4F0E4?font=montserrat&text=JZ+Rider+125" alt="JZ Rider 125 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Front" alt="JZ Rider 125 front view"></button>
+                <button><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Side" alt="JZ Rider 125 side view"></button>
+                <button><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Rear" alt="JZ Rider 125 rear view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">TWO-WHEELER &middot; COMMUTER</span>
+              <h3>JZ Rider 125</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">A reliable daily commuter with good ground clearance and a big fuel tank — built to handle traffic, errands and longer routes without frequent refuelling.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2010mm x 750mm x 1070mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1270mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>165mm</td></tr>
+                  <tr><td>Curb Mass</td><td>118kg</td></tr>
+                  <tr><td>Max Load Mass (incl. rider)</td><td>260kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>125ml</td></tr>
+                  <tr><td>Starter</td><td>Kickstart / Electric start</td></tr>
+                  <tr><td>Max Power</td><td>7.2kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>1.8L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>90km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>3.9m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 2.50-17 / Rear 2.75-17</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>13L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>1000ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Rider 125?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== JZ Trail 150 ===== -->
+      <div class="catalog-card reveal" data-id="trail-150" data-type="motorcycle">
+        <div class="bike-media">
+          <img src="https://placehold.co/600x420/C1402E/F4F0E4?font=montserrat&text=JZ+Trail+150" alt="JZ Trail 150 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">TWO-WHEELER &middot; ALL-TERRAIN</span>
+          <h3>JZ Trail 150</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>150cc</strong></div>
+            <div>Clearance<strong>180mm</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-trail-150" data-for="trail-150">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/C1402E/F4F0E4?font=montserrat&text=JZ+Trail+150" alt="JZ Trail 150 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Front" alt="JZ Trail 150 front view"></button>
+                <button><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Side" alt="JZ Trail 150 side view"></button>
+                <button><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Rear" alt="JZ Trail 150 rear view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">TWO-WHEELER &middot; ALL-TERRAIN</span>
+              <h3>JZ Trail 150</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">Higher ground clearance and a sturdy front fender make this a strong choice for rougher roads and rural routes.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2045mm x 775mm x 1080mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1290mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>180mm</td></tr>
+                  <tr><td>Curb Mass</td><td>137kg</td></tr>
+                  <tr><td>Max Load Mass (incl. rider)</td><td>297kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>149ml</td></tr>
+                  <tr><td>Starter</td><td>Kickstart / Electric start</td></tr>
+                  <tr><td>Max Power</td><td>8.6kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>1.9L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>95km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>4m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 2.75-18 / Rear 3.00-18</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>12L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>1000ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Trail 150?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== JZ Sport 200 ===== -->
+      <div class="catalog-card reveal" data-id="sport-200" data-type="motorcycle">
+        <div class="bike-media">
+          <img src="https://placehold.co/600x420/1D4438/F4F0E4?font=montserrat&text=JZ+Sport+200" alt="JZ Sport 200 — placeholder photo">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">TWO-WHEELER &middot; PERFORMANCE</span>
+          <h3>JZ Sport 200</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>200cc</strong></div>
+            <div>Top Speed<strong>110km/h</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Tap to expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="dossier-row" id="dossier-sport-200" data-for="sport-200">
+        <div class="dossier">
+          <button class="dossier-close" aria-label="Close">&#10005;</button>
+          <div class="dossier-top">
+            <div class="dossier-gallery">
+              <div class="dossier-gallery-main">
+                <img src="https://placehold.co/900x700/1D4438/F4F0E4?font=montserrat&text=JZ+Sport+200" alt="JZ Sport 200 — front view placeholder photo">
+              </div>
+              <div class="dossier-thumbs">
+                <button class="active"><img src="https://placehold.co/300x220/1D4438/F4F0E4?font=montserrat&text=Front" alt="JZ Sport 200 front view"></button>
+                <button><img src="https://placehold.co/300x220/C1402E/F4F0E4?font=montserrat&text=Side" alt="JZ Sport 200 side view"></button>
+                <button><img src="https://placehold.co/300x220/2E5C78/F4F0E4?font=montserrat&text=Rear" alt="JZ Sport 200 rear view"></button>
+              </div>
+            </div>
+            <div class="dossier-info">
+              <span class="cat mono">TWO-WHEELER &middot; PERFORMANCE</span>
+              <h3>JZ Sport 200</h3>
+              <div class="dossier-tabs">
+                <button class="active" data-tab="overview">Overview</button>
+                <button data-tab="specs">Specs</button>
+              </div>
+              <div class="dossier-pane active" data-pane="overview">
+                <p class="desc">Our punchiest two-wheeler, with a bigger engine for riders who want more power for longer or faster routes.</p>
+              </div>
+              <div class="dossier-pane" data-pane="specs">
+                <table class="spec-table">
+                  <tr><td colspan="2" style="padding-top:0; color:var(--green); font-weight:700; letter-spacing:0.06em;">MAIN TECHNICAL PARAMETERS</td></tr>
+                  <tr><td>Length x Width x Height</td><td>2080mm x 760mm x 1100mm</td></tr>
+                  <tr><td>Wheelbase</td><td>1320mm</td></tr>
+                  <tr><td>Ground Clearance</td><td>160mm</td></tr>
+                  <tr><td>Curb Mass</td><td>132kg</td></tr>
+                  <tr><td>Max Load Mass (incl. rider)</td><td>280kg</td></tr>
+                  <tr><td>Engine Type</td><td>Single cylinder, air-cool, 4-stroke</td></tr>
+                  <tr><td>Displacement</td><td>200ml</td></tr>
+                  <tr><td>Starter</td><td>Electric start</td></tr>
+                  <tr><td>Max Power</td><td>11.4kW</td></tr>
+                  <tr><td>Fuel Consumption</td><td>2.4L/100km</td></tr>
+                  <tr><td>Max Speed</td><td>110km/h</td></tr>
+                  <tr><td>Turning Clearance Circle</td><td>4.1m</td></tr>
+                  <tr><td>Tyre Specification</td><td>Front 2.75-17 / Rear 3.00-17</td></tr>
+                  <tr><td>Ignition Method</td><td>C.D.I</td></tr>
+                  <tr><td>Spark Plug</td><td>D8RC</td></tr>
+                  <tr><td>Battery</td><td>12V, 7Ah</td></tr>
+                  <tr><td>Fuse</td><td>15A</td></tr>
+                  <tr><td>Fuel Tank (incl. reserve)</td><td>14L</td></tr>
+                  <tr><td>Engine Oil (replacement)</td><td>1100ml</td></tr>
+                </table>
+              </div>
+
+              <div class="interest-panel">
+                <span class="eyebrow">JIUZHOU MOTORCYCLES</span>
+                <h4>Interested in the JZ Sport 200?</h4>
+                <p>Chat with our team for current pricing, financing options and availability.</p>
+                <div class="dossier-footer" style="margin-top:0;">
+                  <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Enquire on WhatsApp</a>
+                  <a href="tel:+256700000000" class="btn btn-outline">Call Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mono" style="color:var(--muted); font-size:12px; margin-top:8px;">// Model names, specs and images shown are placeholders — will be updated with the real lineup and photos.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <h2>Don't see what you need?</h2>
+      <p>Tell us what you're looking for and we'll help you find the right bike.</p>
+      <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="word">JIUZHOU<span>·</span>MOTO</span>
+        <p>Rugged tricycles and two-wheel motorcycles for Uganda's roads, with financing to match. Sales, spare parts and aftersales support, nationwide.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Bikes</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bikes</h4>
+        <ul>
+          <li><a href="products.html">Tricycles / Tuktuks</a></li>
+          <li><a href="products.html">Two-Wheelers</a></li>
+          <li><a href="index.html#services">Financing &amp; Loans</a></li>
+          <li><a href="index.html#services">Spare Parts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <span class="contact-line">+256 700 000 000</span>
+        <span class="contact-line">info@jiuzhoumotorcycles.com</span>
+        <span class="contact-line">Plot 12, Industrial Area,<br>Kampala, Uganda</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Jiuzhou Motorcycles. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.6-1.4 1.2-2 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.3.1.7-.1 1.2z"/></svg>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>
