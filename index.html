@@ -1,22 +1,4 @@
 <!DOCTYPE html>
-<!--
-  ============================================================
-  JIUZHOU MOTORCYCLES — HOME PAGE — WORKING DRAFT
-  ============================================================
-  PLACEHOLDER CONTENT — replace before launch:
-  1. LOGO / PHOTOS   — SVG icons stand in for real photos/logo
-  2. TAGLINE / COPY  — hero line, about text, service text: drafts
-  3. STATS STRIP     — "500+ Riders" etc are placeholder numbers
-  4. FINANCING       — partner logos are blank placeholder boxes,
-                        no real bank/partner has been confirmed
-  5. TESTIMONIALS    — three quotes below are written as examples,
-                        not real customers. Replace or remove.
-  6. PRODUCTS        — featured bikes here use fictional specs,
-                        full catalog lives in products.html
-  7. CONTACT         — dummy phone/email/address, see products.html
-                        header comment for the same note
-  ============================================================
--->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -32,11 +14,9 @@
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <header>
-  
   <div class="wrap nav-inner">
     <a href="index.html" class="logo">
-      <span class="word">JIUZHOU<span>·</span>UGANDA</span>
-      <span class="sub">TRICYCLES &amp; MOTORCYCLES — UGANDA</span>
+      <img src="images/logo.png" alt="Jiuzhou Motorcycles" class="logo-img">
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
     <nav class="main-nav" id="mainNav">
@@ -49,7 +29,7 @@
       </ul>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-red" href="https://wa.me/256755444375" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-red" href="https://wa.me/256770699999" target="_blank" rel="noopener">Chat on WhatsApp</a>
     </div>
   </div>
 </header>
@@ -57,16 +37,22 @@
 <section class="hero">
   <div class="hero-grid-lines"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow reveal">TRICYCLES &middot; MOTORCYCLES &middot; FINANCING AVAILABLE</span>
-    <h1 class="reveal">Built to carry.<br>Built to <em>last<svg class="scribble" viewBox="0 0 200 20" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c20-9 40-9 55-3 18 7 35 8 55 1 22-8 42-7 60 2 12 5 18 5 25 2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></em>.</h1>
-    <p class="lede reveal">Jiuzhou Motorcycles supplies rugged tricycles and two-wheel motorcycles engineered for Uganda's roads — plus flexible financing to get you riding sooner.</p>
-    <div class="hero-ctas reveal">
-      <a href="products.html" class="btn btn-red">View Our Bikes</a>
-      <a href="#services" class="btn btn-outline">Explore Services</a>
-      <span class="hero-note">
-        <svg viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4c10 14 20 18 34 22M36 26l-6-2 2-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        replies same day, promise
-      </span>
+    <div class="hero-copy">
+      <span class="eyebrow reveal">TRICYCLES &middot; MOTORCYCLES &middot; FINANCING AVAILABLE</span>
+      <h1 class="reveal">Built to carry.<br>Built to <em>last<svg class="scribble" viewBox="0 0 200 20" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c20-9 40-9 55-3 18 7 35 8 55 1 22-8 42-7 60 2 12 5 18 5 25 2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></em>.</h1>
+      <p class="lede reveal">Jiuzhou Motorcycles supplies rugged tricycles and two-wheel motorcycles engineered for Uganda's roads — plus flexible financing to get you riding sooner.</p>
+      <div class="hero-ctas reveal">
+        <a href="products.html" class="btn btn-red">View Our Bikes</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+        <span class="hero-note">
+          <svg viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4c10 14 20 18 34 22M36 26l-6-2 2-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          replies same day, promise
+        </span>
+      </div>
+    </div>
+    <div class="hero-banner reveal">
+      <img src="images/offer.png" alt="Jiuzhou tricycle and motorcycle lineup">
+      <span class="hero-banner-tag">New Stock Arriving</span>
     </div>
   </div>
 </section>
@@ -95,13 +81,83 @@
     <span>&#9679;</span>
   </div>
 </div>
+<section class="section" style="padding-top:64px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">THE LINEUP</span>
+        <h2>Ready to ride</h2>
+      </div>
+      <a href="products.html" class="btn btn-outline">View All Bikes</a>
+    </div>
+    <div class="bike-grid">
+
+      <a href="products.html" class="bike-card reveal">
+        <div class="bike-media">
+          <span class="bike-badge">Popular</span>
+          <img src="images/5.png" alt="JZ Cargo 200 (Air-Cooled)">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">CARGO TRICYCLE</span>
+          <h3>SHEN LONG KAYOOLA 200</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>200cc</strong></div>
+            <div>Load<strong>1.2 tons</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="products.html" class="bike-card reveal">
+        <div class="bike-media">
+          <img src="images/5.png" alt="JZ Rider 125">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">TWO-WHEELER</span>
+          <h3>SHEN KAYOOLA 125</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>125cc</strong></div>
+            <div>Tank<strong>13L</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="products.html" class="bike-card reveal">
+        <div class="bike-media">
+          <span class="bike-badge">New</span>
+          <img src="images/4.png" alt="JZ Cargo 300 (Double Tire)">
+        </div>
+        <div class="bike-body">
+          <span class="cat mono">CARGO TRICYCLE</span>
+          <h3>SHEN LONG KAYOOLA 300</h3>
+          <div class="bike-specs-mini">
+            <div>Engine<strong>300cc</strong></div>
+            <div>Load<strong>1.8 tons</strong></div>
+          </div>
+          <div class="bike-body-footer">
+            <span class="price-tag">Price on request</span>
+            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <section class="stats">
   <div class="wrap">
-    <div class="stat reveal"><span class="num" data-count="12" data-suffix="+">0</span><span class="lbl">Models Available</span></div>
-    <div class="stat reveal"><span class="num" data-count="24" data-suffix="">0</span><span class="lbl">Districts Reached</span></div>
-    <div class="stat reveal"><span class="num" data-count="500" data-suffix="+">0</span><span class="lbl">Riders Served</span></div>
+    <div class="stat reveal"><span class="num" data-count="24" data-suffix="+">0</span><span class="lbl">Districts Reached</span></div>
+    <div class="stat reveal"><span class="num" data-count="1124" data-suffix="+">0</span><span class="lbl">Riders Served</span></div>
     <div class="stat reveal"><span class="num" data-count="1" data-suffix="YR">0</span><span class="lbl">Warranty Cover</span></div>
+    <div class="stat reveal"><span class="num" data-count="5" data-suffix="">0</span><span class="lbl">Financing Partners</span></div>
   </div>
 </section>
 
@@ -136,6 +192,61 @@
         <p>Wherever you're riding in Uganda, our dealer network has you covered.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section" id="standard">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">STANDARD ON EVERY JIUZHOU</span>
+        <h2>What comes standard</h2>
+      </div>
+      <p>Every Jiuzhou bike ships with the same quality basics — see the full spec-by-spec breakdown on any model's page.</p>
+    </div>
+    <div class="standard-grid">
+      <div class="standard-item reveal">
+        <span class="idx mono">01</span>
+        <h4>JIUZHOU Brand</h4>
+        <p>A well-known China-based manufacturer, among the first batch of listed motorcycle brands.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">02</span>
+        <h4>LED Headlight</h4>
+        <p>High-intensity LED headlights for improved visibility riding at night.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">03</span>
+        <h4>Digital Display</h4>
+        <p>Clear digital speed and mileage display with an intuitive, easy-to-read layout.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">04</span>
+        <h4>Reinforced Frame</h4>
+        <p>Phosphorylation + electrophoresis + baking paint process, on a double-keel 4-beam chassis.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">05</span>
+        <h4>Heavy-Duty Tyres</h4>
+        <p>TNT large-pattern steel-wire tyres — standard 5.00-12, optional 5.50-13.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">06</span>
+        <h4>16L Fuel Tank</h4>
+        <p>Large-capacity fuel tank for longer routes between refills.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">07</span>
+        <h4>Strong Suspension</h4>
+        <p>Double-plated handlebar absorbers with strong spring suspension for comfort on rough roads.</p>
+      </div>
+      <div class="standard-item reveal">
+        <span class="idx mono">08</span>
+        <h4>Comfort Seating</h4>
+        <p>Cold-hair foam cushion with simulated leather backrest for all-day riding comfort.</p>
+      </div>
+    </div>
+    <!-- <p class="mono" style="color:var(--muted); font-size:12px; margin-top:20px;">// See the full 16-point standard features list on every model's page in <a href="products.html" style="color:var(--green); text-decoration:underline;">Our Bikes</a>.</p> -->
   </div>
 </section>
 
@@ -181,22 +292,19 @@
         <h3>Ride now, pay as you earn</h3>
         <p>We work with financing partners to offer flexible loan plans for tricycles and motorcycles — talk to us about what fits your budget.</p>
         <div style="margin-top:24px;">
-          <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-red">Ask About Financing</a>
+          <a href="https://wa.me/256770699999" target="_blank" rel="noopener" class="btn btn-red">Ask About Financing</a>
         </div>
       </div>
       <div class="partner-row">
-        <div class="partner-logo">Centenary Bank</div>
-        <div class="partner-logo">Equity Bank</div>
-        <div class="partner-logo">Stanbic Bank</div>
-        <div class="partner-logo">DFCU Bank</div>
-        <div class="partner-logo">Post Bank Uganda</div>
-        <div class="partner-logo">Pride Microfinance</div>
+        <div class="partner-logo"> <img src="images/centeray.png" alt="Centenary Bank"></div>
+        <div class="partner-logo"> <img src="images/equity.png" alt="Equity Bank"></div>
+        <div class="partner-logo"> <img src="images/stanbic.png" alt="Stanbic Bank"></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="about">
+<!-- <section class="section" id="about">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
@@ -207,89 +315,18 @@
     </div>
     <div class="showroom-grid reveal">
       <div class="sr-main">
-        <img src="https://placehold.co/900x900/1D4438/F4F0E4?font=montserrat&text=Showroom+Photo" alt="Jiuzhou Motorcycles showroom — placeholder photo">
-        <span class="sr-tag">Our Kampala Yard</span>
+        <img src="images/showroom/yard.jpg" alt="Jiuzhou Motorcycles showroom">
+        <span class="sr-tag">Our Jinja Yard</span>
       </div>
       <div class="sr-a">
-        <img src="https://placehold.co/600x420/C1402E/F4F0E4?font=montserrat&text=Bikes+In+Stock" alt="Bikes in stock — placeholder photo">
+        <img src="images/showroom/stock.jpg" alt="Bikes in stock">
       </div>
       <div class="sr-b">
-        <img src="https://placehold.co/600x420/2E5C78/F4F0E4?font=montserrat&text=Service+Bay" alt="Service bay — placeholder photo">
+        <img src="images/showroom/service.jpg" alt="Service bay">
       </div>
     </div>
   </div>
-</section>
-
-<section class="section" style="padding-top:0;">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">THE LINEUP</span>
-        <h2>Featured bikes</h2>
-      </div>
-      <a href="products.html" class="btn btn-outline">View All Bikes</a>
-    </div>
-    <div class="bike-grid">
-
-      <a href="products.html" class="bike-card reveal">
-        <div class="bike-media">
-          <span class="bike-badge">Popular</span>
-          <img src="https://placehold.co/600x420/1D4438/F4F0E4?font=montserrat&text=JZ+Hauler+200" alt="JZ Hauler 200 — placeholder photo">
-        </div>
-        <div class="bike-body">
-          <span class="cat mono">CARGO TRICYCLE</span>
-          <h3>JZ Hauler 200</h3>
-          <div class="bike-specs-mini">
-            <div>Engine<strong>200cc</strong></div>
-            <div>Load<strong>800kg</strong></div>
-          </div>
-          <div class="bike-body-footer">
-            <span class="price-tag">Price on request</span>
-            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="products.html" class="bike-card reveal">
-        <div class="bike-media">
-          <img src="https://placehold.co/600x420/2E5C78/F4F0E4?font=montserrat&text=JZ+Rider+125" alt="JZ Rider 125 — placeholder photo">
-        </div>
-        <div class="bike-body">
-          <span class="cat mono">TWO-WHEELER</span>
-          <h3>JZ Rider 125</h3>
-          <div class="bike-specs-mini">
-            <div>Engine<strong>125cc</strong></div>
-            <div>Tank<strong>13L</strong></div>
-          </div>
-          <div class="bike-body-footer">
-            <span class="price-tag">Price on request</span>
-            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="products.html" class="bike-card reveal">
-        <div class="bike-media">
-          <span class="bike-badge">New</span>
-          <img src="https://placehold.co/600x420/C1402E/F4F0E4?font=montserrat&text=JZ+Runner+150" alt="JZ Runner 150 — placeholder photo">
-        </div>
-        <div class="bike-body">
-          <span class="cat mono">PASSENGER TRICYCLE</span>
-          <h3>JZ Runner 150</h3>
-          <div class="bike-specs-mini">
-            <div>Engine<strong>150cc</strong></div>
-            <div>Seats<strong>3</strong></div>
-          </div>
-          <div class="bike-body-footer">
-            <span class="price-tag">Price on request</span>
-            <span class="view-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
+</section> -->
 
 <section class="testimonials section">
   <div class="wrap">
@@ -330,7 +367,7 @@
     <div class="cta-banner reveal">
       <h2>Ready to get on the road?</h2>
       <p>Chat with us on WhatsApp for pricing, availability and financing options.</p>
-      <a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
+      <a href="https://wa.me/256770699999" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -348,19 +385,19 @@
       <ul class="contact-list reveal">
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.99.36 1.96.68 2.9a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.94.32 1.91.55 2.9.68A2 2 0 0 1 22 16.92z"/></svg></span>
-          <div><span class="label">Phone / WhatsApp</span><span class="value">+256 755 444 375</span></div>
+          <div><span class="label">Phone</span><span class="value">+256 (0)770 699 999    &middot;    +256 (0)766 877 777</span></div>
         </li>
-
+      
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span>
-          <div><span class="label">Email</span><span class="value">info@jiuzhoumotorcycles.com</span></div>
+          <div><span class="label">Email</span><span class="value">jiuzhoumotorcyclecompany@gmail.com</span></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><span class="label">Location</span><span class="value">Plot 42C, Lubas Road, Jinja, Uganda</span></div>
+          <div><span class="label">Location</span><span class="value">Plot 4820, Namanve Estate Kyagwe, Block 111, Mukono District</span></div>
         </li>
         <li>
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"></svg></span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
           <div><span class="label">Open Time</span><span class="value">Mon – Sat, 8:00 AM – 6:00 PM</span></div>
         </li>
       </ul>
@@ -378,6 +415,7 @@
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#EDEAE0" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#EDEAE0" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
           <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="#EDEAE0" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="#EDEAE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c1 2.5 3 4 6 4"/></svg></a>
         </div>
       </div>
     </div>
@@ -388,12 +426,13 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="word">JIUZHOU<span>·</span>UGANDA</span>
+        <img src="images/logo.png" alt="Jiuzhou Motorcycles" class="footer-logo-img">
         <p>Rugged tricycles and two-wheel motorcycles for Uganda's roads, with financing to match. Sales, spare parts and aftersales support, nationwide.</p>
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
           <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c1 2.5 3 4 6 4"/></svg></a>    
         </div>
       </div>
       <div class="footer-col">
@@ -410,16 +449,15 @@
         <ul>
           <li><a href="products.html">Tricycles / Tuktuks</a></li>
           <li><a href="products.html">Two-Wheelers</a></li>
-          <li><a href="index.html#services">Financing &amp; Loans</a></li>
           <li><a href="index.html#services">Spare Parts</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <span class="contact-line">+256 755 444 375</span>
-        <span class="contact-line">info@jiuzhoumotorcycles.com</span>
-        <span class="contact-line">Plot 42C, Lubas Road,<br>Jinja, Uganda</span>
-        
+        <span class="contact-line">+256 770 699 999</span>
+        <span class="contact-line">+256 766 877 777</span>
+        <span class="contact-line">jiuzhoumotorcyclecompany@gmail.com</span>
+        <span class="contact-line">Head Office: Plot 4820, Namanve Estate Kyagwe,<br>Block 111, Mukono District</span>
       </div>
     </div>
     <div class="footer-bottom">
@@ -428,7 +466,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/256755444375" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/256770699999" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.6-1.4 1.2-2 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.3.1.7-.1 1.2z"/></svg>
 </a>
 
