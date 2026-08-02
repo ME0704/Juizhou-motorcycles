@@ -98,7 +98,7 @@ header.scrolled{
   border-bottom:1px solid var(--line);
 }
 header.scrolled .nav-inner{padding:12px 28px;}
-.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+.nav-inner{display:flex; align-items:center; justify-content:space-evenly; gap:20px;}
 .logo{display:flex; align-items:center; gap:10px; line-height:1;}
 .logo-img{width:120px; height:100px; object-fit:cover; object-position:left center; display:block; flex-shrink:0; transition:width .3s ease, height .3s ease;}
 header.scrolled .logo-img{width:82px; height:26px;}
