@@ -5,6 +5,7 @@
    ============================================================ */
 
 :root{
+  color-scheme: light only;
   --bg:#FAF8F2;
   --bg-soft:#F3EEE0;
   --panel:#FFFFFF;
