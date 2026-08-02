@@ -144,8 +144,11 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   nav.main-nav.open{transform:translateX(0);}
   nav.main-nav ul{flex-direction:column; gap:6px;}
   nav.main-nav ul li a{display:block; padding:14px 0; border-bottom:1px solid var(--line);}
-  .menu-toggle{display:block;}
-  .nav-actions {display:none;}
+ .menu-toggle{
+    display: block;
+    margin-left: auto;   /* Pushes it to the far right */
+    z-index: 101;
+  }  .nav-actions {display:none;}
 }
 
 /* ---------- marquee ticker ---------- */
