@@ -98,7 +98,7 @@ header.scrolled{
   border-bottom:1px solid var(--line);
 }
 header.scrolled .nav-inner{padding:12px 28px;}
-.nav-inner{display:flex; align-items:center; justify-content:space-evenly; gap:20px;}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;}
 .logo{display:flex; align-items:center; gap:10px; line-height:1;}
 .logo-img{width:120px; height:100px; object-fit:cover; object-position:left center; display:block; flex-shrink:0; transition:width .3s ease, height .3s ease;}
 header.scrolled .logo-img{width:82px; height:26px;}
@@ -128,16 +128,24 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 
 @media (max-width:900px){
   nav.main-nav{
-    position:fixed; top:0; right:0; bottom:0; width:78%; max-width:320px;
-    background:var(--panel-2); padding:100px 32px 32px;
-    transform:translateX(100%); transition:transform .3s ease; z-index:99;
-    border-left:1px solid var(--line);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 78%;
+    max-width: 320px;
+    background: var(--panel-2);
+    padding: 100px 32px 32px;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    z-index: 99;
+    border-left: 1px solid var(--line);
   }
   nav.main-nav.open{transform:translateX(0);}
   nav.main-nav ul{flex-direction:column; gap:6px;}
   nav.main-nav ul li a{display:block; padding:14px 0; border-bottom:1px solid var(--line);}
-  .menu-toggle{display:block; z-index:101;}
-  .nav-actions .btn-red{display:none;}
+  .menu-toggle{display:block;}
+  .nav-actions {display:none;}
 }
 
 /* ---------- marquee ticker ---------- */
