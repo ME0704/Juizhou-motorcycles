@@ -100,8 +100,15 @@ header.scrolled{
 header.scrolled .nav-inner{padding:12px 28px;}
 .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;}
 .logo{display:flex; align-items:center; gap:10px; line-height:1;}
-.logo-img{width:120px; height:100px; object-fit:cover; object-position:left center; display:block; flex-shrink:0; transition:width .3s ease, height .3s ease;}
-header.scrolled .logo-img{width:82px; height:26px;}
+.logo-img{width:120px; height:90px; object-fit:cover; object-position:left center; display:block; flex-shrink:0; transition:width .3s ease, height .3s ease;}
+/* header.scrolled .logo-img{width:82px; height:26px;}
+@media (max-width:700px){
+  .logo-img,
+  header.scrolled .logo-img{
+    width:100px !important;
+    height:32px !important;
+  }
+} */
 .logo .sub{font-family:'IBM Plex Mono', monospace; font-size:8.5px; letter-spacing:0.14em; color:var(--muted); max-width:130px; line-height:1.35; flex-shrink:0;}
 @media (max-width:560px){.logo .sub{display:none;}}
 nav.main-nav ul{display:flex; gap:34px;}
