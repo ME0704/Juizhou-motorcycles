@@ -69,6 +69,10 @@ h1,h2,h3,.display{
   width:13px; height:3px; background:var(--red); border-radius:2px;
 }
 
+.logo-word{font-family:'Bebas Neue', sans-serif; line-height:1; letter-spacing:0.1em;}
+.logo-word-main{font-size:25px; color:var(--ink); margin-right:2px;}
+.logo-word-sub{font-size:13px; color:var(--green); font-weight:400;}
+
 /* ---------- utility bar ---------- */
 .utility-bar{
   background:var(--green); color:var(--bg); overflow:hidden;
