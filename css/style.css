@@ -16,13 +16,32 @@
   --red:#C1402E;
   --red-dark:#9F3324;
   --blue:#141414;
-  --green:#1D4438;
+  --green:#1B9A54;
   --green-soft:#E8EFE9;
   --black:#15140F;
   --ink:#1C1B16;
   --radius:6px;
   --wrap:1160px;
 }
+
+/* ---------- dark section utility ---------- */
+.dark-section{
+  background:var(--black);
+  color:#fff;
+  --bg:#0F0F0F;
+  --bg-soft:#1A1A1A;
+  --panel:#1A1A1A;
+  --panel-2:#202020;
+  --line:rgba(255,255,255,0.14);
+  --cream:#FFFFFF;
+  --muted:rgba(255,255,255,0.62);
+}
+.dark-section h1, .dark-section h2, .dark-section h3,
+.dark-section h4, .dark-section h5{color:#fff;}
+.dark-section .btn-outline{border-color:#fff; color:#fff;}
+.dark-section .btn-outline:hover{background:rgba(255,255,255,0.12);}
+.dark-section .hero-note, .dark-section .hero-note svg{color:#fff;}
+.dark-section .testi-quote-mark{color:rgba(255,255,255,0.15);}
 
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
@@ -70,8 +89,10 @@ h1,h2,h3,.display{
 }
 
 .logo-word{font-family:'Bebas Neue', sans-serif; line-height:1; letter-spacing:0.1em;}
-.logo-word-main{font-size:25px; color:var(--ink); margin-right:2px;}
-.logo-word-sub{font-size:13px; color:var(--green); font-weight:400;}
+.logo-word-main{font-size:25px; color:#fff; margin-right:2px; transition:color .3s ease;}
+.logo-word-sub{font-size:13px; color:#fff; font-weight:400; transition:color .3s ease;}
+header.scrolled .logo-word-main{color:var(--ink);}
+header.scrolled .logo-word-sub{color:var(--green);}
 
 /* ---------- utility bar ---------- */
 .utility-bar{
@@ -89,6 +110,14 @@ h1,h2,h3,.display{
 header.scrolled .utility-bar{max-height:0; opacity:0;}
 @media (max-width:700px){.utility-bar .u-hide-mobile{display:none;}}
 
+.stats{border-bottom:4px solid var(--black);}
+.section-head h2{position:relative; padding-left:18px;}
+.section-head h2::before{
+  content:""; position:absolute; left:0; top:8%; bottom:8%; width:5px;
+  background:var(--black);
+}
+.testi-slide:nth-of-type(2) .testi-avatar{background:var(--red);}
+.testi-slide:nth-of-type(3) .testi-avatar{background:var(--black);}
 /* ---------- header ---------- */
 header{
   position:fixed; top:0; left:0; right:0; z-index:100;
@@ -118,8 +147,10 @@ header.scrolled .nav-inner{padding:12px 28px;}
 nav.main-nav ul{display:flex; gap:34px;}
 nav.main-nav a{
   font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.06em;
-  text-transform:uppercase; color:var(--cream); position:relative; padding:4px 0;
+  text-transform:uppercase; color:#fff; position:relative; padding:4px 0;
+  transition:color .3s ease;
 }
+header.scrolled nav.main-nav a{color:var(--cream);}
 nav.main-nav a::after{
   content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--red);
   transition:width .25s ease;
@@ -135,7 +166,8 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 .btn-red:hover{background:var(--red-dark);}
 .btn-outline{border:1.5px solid var(--green); color:var(--green);}
 .btn-outline:hover{background:var(--green-soft);}
-.menu-toggle{display:none; background:none; border:none; color:var(--cream); font-size:24px; cursor:pointer;}
+.menu-toggle{display:none; background:none; border:none; color:#fff; font-size:24px; cursor:pointer; transition:color .3s ease;}
+header.scrolled .menu-toggle{color:var(--cream);}
 
 @media (max-width:900px){
   nav.main-nav{
@@ -297,6 +329,9 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   }
 }
 
+.testi-slide:nth-of-type(2) .testi-avatar{background:var(--red);}
+.testi-slide:nth-of-type(3) .testi-avatar{background:#fff; color:var(--black);}
+
 /* ---------- featured bikes (home preview) ---------- */
 .bike-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 @media (max-width:900px){.bike-grid{grid-template-columns:1fr 1fr;}}
@@ -399,8 +434,12 @@ footer{background:var(--black); color:var(--bg); padding:64px 0 0; border-top:3p
 .footer-social a:hover{border-color:var(--red); background:rgba(193,64,46,0.15);}
 .footer-social svg{width:14px; height:14px; color:var(--bg);}
 .footer-col h4{
-  font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+  font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; position:relative; padding-bottom:10px;
   color:rgba(244,240,224,0.45); margin-bottom:18px;
+}
+.footer-col h4{}
+.footer-col h4::after{
+  content:""; position:absolute; left:0; bottom:0; width:24px; height:2px; background:var(--red);
 }
 .footer-col ul li{margin-bottom:11px;}
 .footer-col ul li a{font-size:14px; color:rgba(244,240,224,0.85); transition:color .2s ease;}
@@ -465,9 +504,9 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--red); outline-offs
 .toggle-group button.active{background:var(--red); color:#fff;}
 .result-count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);}
 
-.catalog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:24px;}
-@media (max-width:940px){.catalog-grid{grid-template-columns:1fr 1fr;}}
+.catalog-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px; margin-bottom:24px;}
 @media (max-width:640px){.catalog-grid{grid-template-columns:1fr;}}
+.catalog-card .bike-media{height:300px;}
 
 .dossier-row{grid-column:1/-1; display:none; margin:-6px 0 18px;}
 .dossier-row.open{display:block;}
@@ -489,6 +528,10 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--red); outline-offs
   flex:1; height:90px; border-radius:4px; border:1.5px solid var(--line); background:var(--panel);
   cursor:pointer; display:flex; align-items:center; justify-content:center; transition:border-color .2s ease;
   overflow:hidden; padding:0;
+}
+.dossier-info h3{position:relative; padding-left:16px;}
+.dossier-info h3::before{
+  content:""; position:absolute; left:0; top:10%; bottom:10%; width:4px; background:var(--black);
 }
 .dossier-thumbs button.active{border-color:var(--red);}
 .dossier-thumbs img{width:100%; height:100%; object-fit:cover;}
@@ -548,6 +591,11 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--red); outline-offs
 @media (max-width:780px){
   .feature-table{grid-template-columns:1fr;}
   .ft-row:nth-child(odd){border-right:none;}
+}
+
+.bike-body h3{position:relative; display:inline-block;}
+.bike-card:hover .bike-body h3::after{
+  content:""; position:absolute; left:0; bottom:-3px; width:100%; height:2px; background:var(--red);
 }
 
 /* ---------- showroom gallery ---------- */
