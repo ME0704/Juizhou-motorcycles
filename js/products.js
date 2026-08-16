@@ -100,3 +100,93 @@ document.addEventListener('click', (e) => {
 });
 
 updateResultCount();
+
+// image lightbox with tap-to-zoom
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightboxImg.classList.remove('zoomed');
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// open when tapping the main dossier image
+document.addEventListener('click', (e) => {
+  const mainImg = e.target.closest('.dossier-gallery-main img');
+  if (mainImg) {
+    openLightbox(mainImg.src, mainImg.alt);
+  }
+});
+
+// tap image inside lightbox to toggle zoom
+if (lightboxImg) {
+  lightboxImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lightboxImg.classList.toggle('zoomed');
+  });
+}
+
+// tap background or close button to exit
+if (lightbox) {
+  lightbox.addEventListener('click', closeLightbox);
+}
+if (lightboxClose) {
+  lightboxClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+}
+
+// escape key closes it
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});
+
+
+// magnifier lens — hover-zoom on the main dossier image (desktop only)
+if (window.matchMedia('(hover: hover)').matches) {
+  const lens = document.createElement('div');
+  lens.className = 'mag-lens';
+  document.body.appendChild(lens);
+
+  const ZOOM = 1.6; // how much the lens magnifies
+
+  document.addEventListener('mousemove', (e) => {
+    const container = e.target.closest('.dossier-gallery-main');
+    const img = container ? container.querySelector('img') : null;
+
+    if (!img) {
+      lens.classList.remove('show');
+      return;
+    }
+
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // only show the lens while actually over the image itself
+    if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+      lens.classList.remove('show');
+      return;
+    }
+
+    lens.classList.add('show');
+    lens.style.left = (e.clientX - lens.offsetWidth / 2) + 'px';
+    lens.style.top = (e.clientY - lens.offsetHeight / 2) + 'px';
+    lens.style.backgroundImage = `url("${img.src}")`;
+    lens.style.backgroundSize = (rect.width * ZOOM) + 'px ' + (rect.height * ZOOM) + 'px';
+    lens.style.backgroundPosition =
+      `${-(x * ZOOM - lens.offsetWidth / 2)}px ${-(y * ZOOM - lens.offsetHeight / 2)}px`;
+  });
+
+  document.addEventListener('mouseleave', () => lens.classList.remove('show'));
+}

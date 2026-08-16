@@ -6,7 +6,7 @@
 
 :root{
   color-scheme: light only;
-  --bg:#FFFFFF;
+  --bg:#E8F5E9;
   --bg-soft:#E8F5E9;
   --panel:#FFFFFF;
   --panel-2:#E8F5E9;
@@ -639,6 +639,42 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
   .showroom-grid .sr-main{grid-row:auto;}
 }
 
+/* ---------- magnifier lens (hover zoom on desktop) ---------- */
+.mag-lens{
+  position:fixed;
+  width:170px; height:170px;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0 12px 34px -10px rgba(0,0,0,0.45), 0 0 0 1px rgba(0,0,0,0.08);
+  pointer-events:none;
+  z-index:250;
+  display:none;
+  background-repeat:no-repeat;
+}
+.mag-lens.show{display:block;}
+.dossier-gallery-main{cursor:zoom-in;}
+@media (hover:none){.mag-lens{display:none !important;}}
+
+/* ---------- image lightbox / zoom ---------- */
+.lightbox{
+  position:fixed; inset:0; background:rgba(15,15,15,0.94); z-index:300;
+  display:none; align-items:center; justify-content:center; padding:24px;
+  cursor:zoom-out;
+}
+.lightbox.open{display:flex;}
+.lightbox img{
+  max-width:92vw; max-height:88vh; object-fit:contain; cursor:zoom-in;
+  transition:transform .25s ease; transform:scale(1);
+  touch-action:pinch-zoom;
+}
+.lightbox img.zoomed{transform:scale(2.2); cursor:zoom-out;}
+.lightbox-close{
+  position:absolute; top:20px; right:20px; width:44px; height:44px; border-radius:50%;
+  background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.3); color:#fff;
+  font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.dossier-gallery-main{cursor:zoom-in;}
+
 /* ---------- interested-in CTA panel (dossier) ---------- */
 .interest-panel{
   background:var(--green-soft); border:1px solid var(--line); border-left:4px solid var(--red); border-radius:var(--radius);
@@ -670,3 +706,5 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 }
 .catalog-card:hover{border-color:var(--red); box-shadow:0 20px 34px -22px rgba(28,27,22,0.25);}
 .catalog-card.selected{border-color:var(--red);}
+
+
