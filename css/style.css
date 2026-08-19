@@ -21,7 +21,7 @@
   --black:#0e0d0a;
   --ink:#1C1B16;
   --radius:6px;
-  --wrap:1160px;
+--wrap:1560px;
 }
 
 /* ---------- brand section (green) ---------- */
@@ -176,8 +176,8 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   display:inline-flex; align-items:center; gap:8px; transition:transform .15s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
   will-change:transform;
 }
-.btn-red{background:var(--red); color:#fff; box-shadow:0 6px 16px -8px rgba(193,64,46,0.5);}
-.btn-red:hover{background:var(--red-dark);}
+.btn-red{background:var(--red-dark); color:#fff; box-shadow:0 6px 16px -8px rgba(193,64,46,0.5);}
+.btn-red:hover{background:var(--red);}
 .btn-outline{border:1.5px solid var(--green); color:var(--green);}
 .btn-outline:hover{background:var(--green-soft);}
 .menu-toggle{display:none; background:none; border:none; color:#fff; font-size:24px; cursor:pointer;}
@@ -271,6 +271,8 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   padding:8px 14px; border-radius:999px; font-weight:700;
   box-shadow:0 6px 16px -4px rgba(0,0,0,0.4);
 }
+.hero-copy{max-width:640px; margin:0 auto; text-align:center;}
+.hero-ctas{justify-content:center;}
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr; gap:32px;}
   .hero-banner{aspect-ratio:16/10;}
@@ -367,11 +369,12 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 }
 .bike-card:hover{box-shadow:0 26px 40px -22px rgba(28,27,22,0.28); border-color:var(--line);}
 .bike-media{
-  background:linear-gradient(140deg, var(--panel), var(--bg-soft));
+  background:linear-gradient(140deg, var(--bg-soft), var(--bg-soft));
   height:250px; display:flex; align-items:center; justify-content:center; position:relative;
   overflow:hidden;
 }
-.bike-media img{width:100%; height:100%; object-fit:cover;}
+.bike-media img{width:100%; height:100%; object-fit:contain; transform:scale(1.12); transition:transform .3s ease;}
+.bike-card:hover .bike-media img{transform:scale(1.18);}
 .bike-badge{
   position:absolute; top:12px; left:12px; background:var(--red); color:#fff;
   font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase;
@@ -412,7 +415,7 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 
 /* ---------- CTA banner ---------- */
 .cta-banner{
-  background:linear-gradient(120deg, var(--blue), var(--red-dark));
+  background:var(--red-dark); color:#fff;
   border-radius:var(--radius); padding:60px 50px; text-align:center;
 }
 .cta-banner h2{font-size:clamp(30px,4.6vw,48px); color:#fff; text-transform:uppercase; margin-bottom:16px;}
@@ -708,3 +711,52 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 .catalog-card.selected{border-color:var(--red);}
 
 
+.scroll-hint{
+  position:fixed; bottom:24px; right:158px; z-index:90;
+  background:var(--panel); color:var(--green); width:44px; height:44px; border-radius:50%;
+  border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 22px -12px rgba(0,0,0,0.3); cursor:pointer;
+  animation:bounceHint 1.8s ease-in-out infinite;
+  transition:opacity .25s ease;
+}
+.scroll-hint svg{width:18px; height:18px;}
+.scroll-hint.hide{opacity:0; pointer-events:none;}
+@keyframes bounceHint{0%,100%{transform:translateY(0);} 50%{transform:translateY(6px);}}
+@media (max-width:560px){.scroll-hint{right:20px; bottom:140px;}}
+
+
+/* ---------- red section variant ---------- */
+.red-section{
+  background:var(--red);
+  color:#fff;
+  --bg:var(--red);
+  --bg-soft:var(--red-dark);
+  --panel:var(--red-dark);
+  --panel-2:#8F1919;
+  --line:rgba(255,255,255,0.2);
+  --cream:#FFFFFF;
+  --muted:rgba(255,255,255,0.75);
+}
+.red-section h1, .red-section h2, .red-section h3,
+.red-section h4, .red-section h5{color:#fff;}
+.red-section .standard-item .idx,
+.red-section .ft-num{color:#fff;}
+.red-section .standard-item:hover,
+.red-section .ft-row:hover{border-color:#fff;}
+
+.black-section{
+  background:var(--green);
+  color:#fff;
+  --bg:var(--green);
+  --bg-soft:#5a1c1c;
+  --panel:#0c3001;
+  --panel-2:#222222;
+  --line:rgba(255,255,255,0.14);
+  --cream:#FFFFFF;
+  --muted:rgba(255,255,255,0.65);
+}
+.black-section h1, .black-section h2, .black-section h3,
+.black-section h4, .black-section h5{color:#fff;}
+.black-section .standard-item{border-left:4px solid var(--red);}
+.black-section .standard-item .idx{color:var(--red);}
+.black-section .standard-item:hover{border-color:var(--red);}

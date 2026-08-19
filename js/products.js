@@ -190,3 +190,15 @@ if (window.matchMedia('(hover: hover)').matches) {
 
   document.addEventListener('mouseleave', () => lens.classList.remove('show'));
 }
+
+// scroll-down hint
+const scrollHint = document.getElementById('scrollHint');
+if (scrollHint) {
+  scrollHint.addEventListener('click', () => {
+    window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', () => {
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 200;
+    scrollHint.classList.toggle('hide', nearBottom);
+  }, { passive: true });
+}
