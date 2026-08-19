@@ -16,7 +16,7 @@
   --red:#C1402E;
   --red-dark:#9F3324;
   --blue:#0B1849;
-  --green:#227c02;
+  --green:#267e06;
   --green-soft:#E8EFE9;
   --black:#0e0d0a;
   --ink:#1C1B16;
@@ -29,7 +29,7 @@
   background:var(--green);
   color:#fff;
   --bg:var(--green);
-  --bg-soft:#063B00;
+  --bg-soft:#063001;
   --panel:#22610b;
   --panel-2:#1B9A54;
   --line:rgba(255,255,255,0.2);
