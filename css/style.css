@@ -532,7 +532,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 
 .catalog-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:30px; margin-bottom:24px;}
 @media (max-width:640px){.catalog-grid{grid-template-columns:1fr;}}
-.catalog-card .bike-media{height:400px;}
+.catalog-card .bike-media{height:auto; aspect-ratio:4/3;}
 
 .dossier-row{grid-column:1/-1; display:none; margin:-6px 0 18px;}
 .dossier-row.open{display:block;}
@@ -545,7 +545,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 .dossier-top{display:grid; grid-template-columns:1fr 1fr; gap:0;}
 .dossier-gallery{background:var(--bg-soft); padding:20px; display:flex; flex-direction:column; gap:16px;}
 .dossier-gallery-main{
-  height:350px; border-radius:4px; background:linear-gradient(140deg, var(--panel), var(--bg-soft));
+  height:auto; aspect-ratio:16/11; border-radius:4px; background:linear-gradient(140deg, var(--panel), var(--bg-soft));
   display:flex; align-items:center; justify-content:center; border:1px solid var(--line); overflow:hidden;
 }
 .dossier-gallery-main img{width:100%; height:100%; object-fit:cover;}
