@@ -182,6 +182,7 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 .btn-outline:hover{background:var(--green-soft);}
 .menu-toggle{display:none; background:none; border:none; color:#fff; font-size:24px; cursor:pointer;}
 
+
 @media (max-width:900px){
   nav.main-nav{
     position: fixed;
@@ -223,24 +224,27 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 
 /* ---------- hero ---------- */
 .hero{
-  position:relative; padding:150px 0 90px;
+  position:relative;
+  padding:170px 0 120px;
+  min-height:600px;
+  display:flex;
+  align-items:center;
   background:
-    radial-gradient(560px 380px at var(--mx,82%) var(--my,8%), rgba(193,64,46,0.12), transparent 60%),
-    radial-gradient(ellipse 600px 460px at 8% 95%, rgba(0,0,0,0.15), transparent 60%),
-    var(--bg);
-  overflow:hidden;
+    linear-gradient(100deg, rgba(15,14,10,0.82) 0%, rgba(15,14,10,0.5) 5%, rgba(15,14,10,0.2) 10%),
+url("../images/offer.jpg") center center / cover no-repeat,
+    var(--black);
 }
-.hero-grid-lines{
+@media (max-width:700px){.hero{padding:140px 0 70px; min-height:480px;}}.hero-grid-lines{
   position:absolute; inset:0; pointer-events:none; opacity:0.55;
   background-image:linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size:64px 64px; mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,0.4) 35%, transparent 88%);
 }
 .hero-inner{
-  position:relative; display:grid;  align-items:center;
+  position:relative; z-index:2;
 }
-.hero h1{font-size:clamp(40px,5.6vw,68px); color:var(--cream); text-transform:uppercase;}
+.hero h1{font-size:clamp(40px,5.6vw,68px); color:#fff; text-transform:uppercase;}
 .hero h1 em{font-style:normal; color:var(--red); position:relative; display:inline-block;}
-.hero p.lede{font-size:16.5px; color:var(--muted); max-width:48ch; margin:20px 0 30px;}
+.hero p.lede{font-size:16.5px; color:rgba(255,255,255,0.85); max-width:48ch; margin:20px 0 30px;}
 .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; align-items:center; position:relative;}
 
 /* badge instead of cursive script — matches body font, not Caveat */
@@ -254,15 +258,18 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 @media (max-width:640px){.hero-note{display:none;}}
 
 /* image banner — grounded, tag moved up top with red for contrast */
-.hero-banner{
+/* .hero-banner{
   position:relative; border-radius:10px; overflow:hidden; aspect-ratio:6/5.2;
   box-shadow:0 30px 60px -30px rgba(0,0,0,0.45); border:1px solid var(--line);
   background:linear-gradient(180deg, rgba(255,255,255,0.05), transparent 40%);
+  display:flex; align-items:center; justify-content:center;
 }
-.hero-banner img{width:100%; height:100%; object-fit:cover;}
+.hero-banner img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
 .hero-banner::after{
   content:''; position:absolute; left:8%; right:8%; bottom:5%; height:12%;
-  background:radial-gradient(ellipse, rgba(0,0,0,0.5), transparent 70%);
+  background:radial-gradient(ellipse, transparent 70%);
   filter:blur(6px); pointer-events:none;
 }
 .hero-banner-tag{
@@ -270,13 +277,13 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
   padding:8px 14px; border-radius:999px; font-weight:700;
   box-shadow:0 6px 16px -4px rgba(0,0,0,0.4);
-}
-.hero-copy{max-width:640px; margin:0 auto; text-align:center;}
-.hero-ctas{justify-content:center;}
-@media (max-width:900px){
+} */
+.hero-copy{max-width:900px; margin:0 auto; text-align:center; display:flex; flex-direction:column; gap:16px; justify-content:space-between;}
+.hero-ctas{justify-content:space-between;}
+/* @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr; gap:32px;}
   .hero-banner{aspect-ratio:16/10;}
-}
+} */
 
 /* ---------- stats ---------- */
 .stats{background:var(--green); border-top:3px solid var(--red);}
@@ -373,8 +380,11 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   height:250px; display:flex; align-items:center; justify-content:center; position:relative;
   overflow:hidden;
 }
-.bike-media img{width:100%; height:100%; object-fit:contain; transform:scale(1.12); transition:transform .3s ease;}
-.bike-card:hover .bike-media img{transform:scale(1.18);}
+.bike-media img{width:100%; height:100%; object-fit:cover;}
+
+/* the zoom/contain trick only applies to homepage featured cards with transparent cutouts */
+.bike-grid .bike-media img{object-fit:contain; transform:scale(1.12); transition:transform .3s ease;}
+.bike-grid .bike-card:hover .bike-media img{transform:scale(1.18);}
 .bike-badge{
   position:absolute; top:12px; left:12px; background:var(--red); color:#fff;
   font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase;
@@ -532,7 +542,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 
 .catalog-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:30px; margin-bottom:24px;}
 @media (max-width:640px){.catalog-grid{grid-template-columns:1fr;}}
-.catalog-card .bike-media{height:auto; aspect-ratio:4/3;}
+.catalog-card .bike-media{height:auto !important; aspect-ratio:4/3 !important;}
 
 .dossier-row{grid-column:1/-1; display:none; margin:-6px 0 18px;}
 .dossier-row.open{display:block;}
