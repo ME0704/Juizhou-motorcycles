@@ -365,7 +365,7 @@ url("../images/offer.jpg") center center / cover no-repeat,
 .testi-slide:nth-of-type(3) .testi-avatar{background:#fff; color:var(--black);}
 
 /* ---------- featured bikes (home preview) ---------- */
-.bike-grid{display:grid; grid-template-columns:repeat(2,2fr); gap:24px;}
+.bike-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 @media (max-width:900px){.bike-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:620px){.bike-grid{grid-template-columns:1fr;}}
 
