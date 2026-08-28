@@ -250,12 +250,12 @@ url("../images/offer.jpg") center center / cover no-repeat,
  .hero{
   position:relative;
   padding:170px 0 120px;
-  min-height: 400px;
+  min-height: 680px;
   display:flex;
   align-items:center;
   background:
     linear-gradient(100deg, rgba(15,14,10,0.82) 0%, rgba(15,14,10,0.5) 5%, rgba(15,14,10,0.2) 10%),
-    url("../images/offer.jpg") center center / cover no-repeat,
+    url("../images/offer.jpg") center 42% / cover no-repeat,
     var(--black);
 }
 
