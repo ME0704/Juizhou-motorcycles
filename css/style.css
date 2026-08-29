@@ -231,22 +231,7 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none;}}
 
 /* ---------- hero ---------- */
-/* .hero{
-  position:relative;
-  padding:170px 0 120px;
-  min-height:600px;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(100deg, rgba(15,14,10,0.82) 0%, rgba(15,14,10,0.5) 5%, rgba(15,14,10,0.2) 10%),
-url("../images/offer.jpg") center center / cover no-repeat,
-    var(--black);
-}
-@media (max-width:700px){.hero{padding:140px 0 70px; min-height:480px;}}.hero-grid-lines{
-  position:absolute; inset:0; pointer-events:none; opacity:0.55;
-  background-image:linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size:64px 64px; mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,0.4) 35%, transparent 88%);
-} */
+
  .hero{
   position:relative;
   padding:170px 0 120px;
@@ -293,30 +278,40 @@ url("../images/offer.jpg") center center / cover no-repeat,
 }
 .hero-note svg{width:15px; height:15px; color:var(--red);}
 @media (max-width:640px){.hero-note{display:none;}}
-
-/* image banner — grounded, tag moved up top with red for contrast */
-/* .hero-banner{
-  position:relative; border-radius:10px; overflow:hidden; aspect-ratio:6/5.2;
-  box-shadow:0 30px 60px -30px rgba(0,0,0,0.45); border:1px solid var(--line);
-  background:linear-gradient(180deg, rgba(255,255,255,0.05), transparent 40%);
-  display:flex; align-items:center; justify-content:center;
-}
-.hero-banner img{
-  width:100%; height:100%; object-fit:cover; display:block;
-}
-.hero-banner::after{
-  content:''; position:absolute; left:8%; right:8%; bottom:5%; height:12%;
-  background:radial-gradient(ellipse, transparent 70%);
-  filter:blur(6px); pointer-events:none;
-}
-.hero-banner-tag{
-  position:absolute; top:16px; left:16px; background:var(--red); color:#fff;
-  font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
-  padding:8px 14px; border-radius:999px; font-weight:700;
-  box-shadow:0 6px 16px -4px rgba(0,0,0,0.4);
-} */
 .hero-copy{max-width:900px; margin:0 auto; text-align:center; display:flex; flex-direction:column; gap:16px; justify-content:space-between;}
 .hero-ctas{justify-content:space-between;}
+
+.hero-offer{
+  margin:24px auto 0; max-width:400px; text-align:center;
+  background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(1px); border-radius:18px; padding:24px 24px 22px;
+}
+.hero-offer-kicker{
+  display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700;
+  letter-spacing:0.16em; text-transform:uppercase; color:var(--red);
+  background:rgba(255,255,255,0.12); padding:5px 12px; border-radius:999px; margin-bottom:10px;
+}
+.hero-offer-headline{
+  font-family:'Bebas Neue',sans-serif; font-size:clamp(24px,3.6vw,32px); color:#fff;
+  text-transform:uppercase; line-height:1.05; margin-bottom:10px;
+}
+.hero-offer-pitch{
+  font-size:14px; color:rgba(255,255,255,0.9); line-height:1.5; margin-bottom:14px;
+}
+.hero-offer-pitch strong{color:var(--red); font-weight:800; font-size:25px;}
+.hero-offer-illo{width:100px; height:auto; color:#fff; margin:0 auto 16px; display:block;}
+.hero-offer-cta{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
+  color:#fff; background:var(--red); padding:12px 22px; border-radius:999px;
+  box-shadow:0 10px 22px -8px rgba(193,64,46,0.55);
+  transition:background .2s ease, transform .2s ease;
+}
+.hero-offer-cta:hover{background:var(--red-dark); transform:translateY(-2px);}
+.hero-offer-cta svg{width:14px; height:14px;}
+@media (max-width:640px){
+  .hero-offer{padding:20px 18px 20px; max-width:320px;}
+}
 @media (max-width:900px){
   .hero-copy{max-width:100%; padding:0 16px; }
 }
@@ -372,29 +367,57 @@ url("../images/offer.jpg") center center / cover no-repeat,
 .financing{
   background:var(--green); color:var(--bg);
   border-radius:var(--radius);
-  padding:48px; display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center;
+  padding:48px; display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:start;
 }
+.financing-left, .financing-right{display:flex; flex-direction:column;}
 .financing h3{font-size:clamp(26px,3.4vw,36px); text-transform:uppercase; margin-bottom:14px; color:#fff;}
-.financing p{color:rgba(244,240,224,0.75); font-size:14.5px; max-width:46ch;}
-.partner-row{display:grid;grid-template-columns:repeat(3,1fr); gap:14px;}
-.partner-logo{background:var(--bg); border:1px solid rgba(255,255,255,0.14);  border-radius:4px;height:68px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:8px 10px;
-  overflow:hidden; /* prevents image overflow */
-}
+.financing-left p{color:rgba(244,240,224,0.75); font-size:14.5px; max-width:46ch; margin-bottom:22px;}
+.financing-left .btn-red{align-self:flex-start;}
 
-.partner-logo img{
-  max-width:130%;
-  max-height:150%;
-  object-fit:contain; /* keeps image proportions */
+.partner-heading{
+  font-family:'Bebas Neue',sans-serif; font-size:22px; text-transform:uppercase; color:#fff;
+  letter-spacing:0.01em; margin-bottom:18px;
 }
+.partner-row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+@media (max-width:900px){
+  .partner-row{grid-template-columns:1fr;}
+}
+.partner-logo{
+  border-radius:8px; height:72px; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.partner-logo img{width:100%; height:100%; object-fit:cover; display:block;}
+
+.financing-prices{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
+.fin-price-card{
+  position:relative; overflow:hidden;
+  background:#fff; color:var(--ink); border-radius:14px; padding:22px 20px 20px;
+  display:flex; flex-direction:column; gap:4px;
+  box-shadow:0 16px 30px -14px rgba(0,0,0,0.4);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.fin-price-card:nth-child(1){transform:rotate(-1.2deg);}
+.fin-price-card:nth-child(2){transform:rotate(1.2deg);}
+.fin-price-card:hover{transform:rotate(0deg) translateY(-6px); box-shadow:0 22px 40px -16px rgba(0,0,0,0.5);}
+.fin-price-card::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:6px; background:var(--red);
+}
+.fp-icon{
+  width:46px; height:46px; color:#fff; background:var(--green); border-radius:12px;
+  display:flex; align-items:center; justify-content:center; padding:10px; margin-bottom:10px;
+}
+.fp-icon svg{width:100%; height:100%;}
+.fp-label{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);}
+.fp-amount{font-family:'Bebas Neue',sans-serif; font-size:30px; color:var(--green); margin-top:2px; line-height:1;}
+.fp-note{font-size:12.5px; color:var(--muted); margin-top:4px;}
 
 @media (max-width:860px){
-  .financing{
-    grid-template-columns:1fr;
-  }
+  .financing{grid-template-columns:1fr;}
+  .financing-right{margin-top:8px;}
+}
+@media (max-width:560px){
+  .financing-prices{grid-template-columns:1fr;}
+  .fin-price-card:nth-child(1),.fin-price-card:nth-child(2){transform:none;}
 }
 
 .testi-slide:nth-of-type(2) .testi-avatar{background:var(--red);}
@@ -813,3 +836,31 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-off
 .black-section .standard-item{border-left:4px solid var(--red);}
 .black-section .standard-item .idx{color:var(--red);}
 .black-section .standard-item:hover{border-color:var(--red);}
+
+
+.financing-prices{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
+.fin-price-card{
+  position:relative; overflow:hidden;
+  background:#fff; color:var(--ink); border-radius:14px; padding:22px 20px 20px;
+  display:flex; flex-direction:column; gap:4px;
+  box-shadow:0 16px 30px -14px rgba(0,0,0,0.4);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.fin-price-card:nth-child(1){transform:rotate(-1.2deg);}
+.fin-price-card:nth-child(2){transform:rotate(1.2deg);}
+.fin-price-card:hover{transform:rotate(0deg) translateY(-6px); box-shadow:0 22px 40px -16px rgba(0,0,0,0.5);}
+.fin-price-card::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:6px; background:var(--red);
+}
+.fp-icon{
+  width:46px; height:46px; color:#fff; background:var(--green); border-radius:12px;
+  display:flex; align-items:center; justify-content:center; padding:10px; margin-bottom:10px;
+}
+.fp-icon svg{width:100%; height:100%;}
+.fp-label{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);}
+.fp-amount{font-family:'Bebas Neue',sans-serif; font-size:30px; color:var(--green); margin-top:2px; line-height:1;}
+.fp-note{font-size:12.5px; color:var(--muted); margin-top:4px;}
+@media (max-width:560px){
+  .financing-prices{grid-template-columns:1fr;}
+  .fin-price-card:nth-child(1),.fin-price-card:nth-child(2){transform:none;}
+}
