@@ -428,7 +428,14 @@ url("../images/offer.jpg") center center / cover no-repeat,
 }
 .bike-body{padding:20px 22px 22px;}
 .bike-body .cat{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--blue); letter-spacing:0.06em;}
-.bike-body h3{font-family:'Manrope',sans-serif; font-weight:700; font-size:19px; text-transform:none; margin:6px 0 12px;}
+.bike-body{text-align:center;}
+.bike-body .cat{display:block; margin-bottom:6px;}
+.bike-body h3{
+  font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:28px; text-transform:uppercase;
+  letter-spacing:0.02em; color:var(--green); margin:4px 0 16px; line-height:1.05;
+}
+.bike-specs-mini{justify-content:center;}
+.bike-body-footer{flex-direction:column; gap:10px;}
 .bike-specs-mini{display:flex; gap:16px; margin-bottom:16px;}
 .bike-specs-mini div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);}
 .bike-specs-mini strong{display:block; color:var(--cream); font-size:13px;}
