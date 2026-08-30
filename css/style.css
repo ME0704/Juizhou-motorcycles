@@ -239,7 +239,7 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
   align-items:center;
   background:
     linear-gradient(100deg, rgba(15,14,10,0.82) 0%, rgba(15,14,10,0.5) 5%, rgba(15,14,10,0.2) 10%),
-    url("../images/offer.jpg") center 42% / cover no-repeat,
+    url("../images/offer.webp") center 42% / cover no-repeat,
     var(--black);
 }
 
@@ -252,7 +252,7 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
     align-items:flex-end;
     background:
       linear-gradient(100deg, rgba(15,14,10,0.82) 0%, rgba(15,14,10,0.5) 5%, rgba(15,14,10,0.2) 10%),
-      url("../images/offer_mobile.jpg") center 25% / cover no-repeat,
+      url("../images/offer.webp") center 25% / cover no-repeat,
             var(--black);
   }
   .hero-copy{gap:10px;}
