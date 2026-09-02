@@ -151,3 +151,201 @@ if (testiSlides.length && testiDotsWrap) {
   }
   setInterval(() => showTesti((active + 1) % testiSlides.length), 5000);
 }
+
+
+// locations carousel arrows
+// const locCarousel = document.getElementById('locCarousel');
+// const locPrev = document.getElementById('locPrev');
+// const locNext = document.getElementById('locNext');
+// if (locCarousel && locPrev && locNext) {
+//   const scrollAmount = () => locCarousel.querySelector('.loc-card').offsetWidth + 20;
+//   locPrev.addEventListener('click', () => locCarousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+//   locNext.addEventListener('click', () => locCarousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+// }
+
+// =====================================================
+// LOCATIONS CAROUSEL
+// =====================================================
+
+// =====================================================
+// LOCATIONS CAROUSEL
+// =====================================================
+
+const locCarousel = document.getElementById('locCarousel');
+const locPrev = document.getElementById('locPrev');
+const locNext = document.getElementById('locNext');
+
+if (locCarousel) {
+
+  let autoScroll;
+
+
+  // Get actual card width + gap
+  const getScrollAmount = () => {
+
+    const card = locCarousel.querySelector('.loc-card');
+
+    if (!card) return 300;
+
+    const gap =
+      parseInt(
+        window.getComputedStyle(locCarousel).gap
+      ) || 20;
+
+    return card.offsetWidth + gap;
+  };
+
+
+  // ---------------------------------------------------
+  // MOVE NEXT
+  // ---------------------------------------------------
+
+  const moveNext = () => {
+
+    const maxScroll =
+      locCarousel.scrollWidth -
+      locCarousel.clientWidth;
+
+    if (locCarousel.scrollLeft >= maxScroll - 10) {
+
+      // Go back to beginning
+      locCarousel.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+
+    } else {
+
+      locCarousel.scrollBy({
+        left: getScrollAmount(),
+        behavior: 'smooth'
+      });
+
+    }
+  };
+
+
+  // ---------------------------------------------------
+  // MOVE PREVIOUS
+  // ---------------------------------------------------
+
+  const movePrevious = () => {
+
+    if (locCarousel.scrollLeft <= 10) {
+
+      // Go to the end
+      locCarousel.scrollTo({
+        left:
+          locCarousel.scrollWidth -
+          locCarousel.clientWidth,
+        behavior: 'smooth'
+      });
+
+    } else {
+
+      locCarousel.scrollBy({
+        left: -getScrollAmount(),
+        behavior: 'smooth'
+      });
+
+    }
+  };
+
+
+  // ---------------------------------------------------
+  // START AUTO SCROLL
+  // ---------------------------------------------------
+
+  const startAutoScroll = () => {
+
+    clearInterval(autoScroll);
+
+    autoScroll = setInterval(() => {
+      moveNext();
+    }, 2000);
+
+  };
+
+
+  // ---------------------------------------------------
+  // RESET TIMER
+  // ---------------------------------------------------
+
+  const resetAutoScroll = () => {
+
+    clearInterval(autoScroll);
+
+    startAutoScroll();
+
+  };
+
+
+  // ---------------------------------------------------
+  // BUTTONS
+  // ---------------------------------------------------
+
+  if (locNext) {
+
+    locNext.addEventListener('click', () => {
+
+      moveNext();
+      resetAutoScroll();
+
+    });
+
+  }
+
+
+  if (locPrev) {
+
+    locPrev.addEventListener('click', () => {
+
+      movePrevious();
+      resetAutoScroll();
+
+    });
+
+  }
+
+
+  // ---------------------------------------------------
+  // PAUSE WHEN MOUSE IS OVER CAROUSEL
+  // ---------------------------------------------------
+
+  locCarousel.addEventListener(
+    'mouseenter',
+    () => clearInterval(autoScroll)
+  );
+
+  locCarousel.addEventListener(
+    'mouseleave',
+    startAutoScroll
+  );
+
+
+  // ---------------------------------------------------
+  // TOUCH SUPPORT
+  // ---------------------------------------------------
+
+  locCarousel.addEventListener(
+    'touchstart',
+    () => clearInterval(autoScroll),
+    { passive: true }
+  );
+
+  locCarousel.addEventListener(
+    'touchend',
+    () => {
+      setTimeout(startAutoScroll, 1000);
+    },
+    { passive: true }
+  );
+
+
+  // ---------------------------------------------------
+  // START
+  // ---------------------------------------------------
+
+  startAutoScroll();
+
+}

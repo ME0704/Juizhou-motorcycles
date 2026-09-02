@@ -298,6 +298,598 @@ nav.main-nav a:hover::after, nav.main-nav a.current::after{width:100%;}
 @media (max-width:900px){
   .hero-copy{max-width:100%; padding:0 16px;}
 }
+
+
+/* ---------- locations carousel ---------- */
+/* .loc-arrows{display:flex; gap:10px;}
+.loc-arrow{
+  width:42px; height:42px; border-radius:50%; border:1.5px solid var(--line);
+  background:var(--panel); color:var(--ink); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:border-color .2s ease, background .2s ease;
+}
+.loc-arrow:hover{border-color:var(--red); background:var(--green-soft);}
+.loc-arrow svg{width:18px; height:18px;}
+
+.loc-carousel{
+  display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding-bottom:8px; scrollbar-width:none;
+}
+.loc-carousel::-webkit-scrollbar{display:none;}
+.loc-card{
+  position:relative; flex:0 0 auto; width:320px; height:220px;
+  border-radius:14px; overflow:hidden; scroll-snap-align:start;
+}
+.loc-card img{width:100%; height:100%; object-fit:cover; display:block;}
+.loc-tag{
+  position:absolute; bottom:14px; left:14px; background:rgba(15,14,10,0.7); color:#fff;
+  font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; letter-spacing:0.04em;
+  padding:8px 14px; border-radius:999px; backdrop-filter:blur(4px);
+}
+@media (max-width:640px){
+  .loc-card{width:260px; height:180px;}
+} */
+
+
+
+/* =========================================================
+   LOCATIONS CAROUSEL
+   ========================================================= */
+
+.loc-carousel {
+  display: flex;
+  gap: 28px;
+  width: 100%;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  padding: 12px 5px 24px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  cursor: grab;
+}
+
+.loc-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.loc-carousel:active {
+  cursor: grabbing;
+}
+
+
+/* =========================================================
+   LARGE PC / LARGE LAPTOP
+   1400px AND ABOVE
+   ========================================================= */
+
+.loc-card {
+  position: relative;
+
+  flex: 0 0 800px;
+  width: 800px;
+  height: 500px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  background: #111;
+
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Image */
+
+.loc-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+
+/* Gradient */
+
+.loc-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.30) 40%,
+      rgba(0, 0, 0, 0.02) 75%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.loc-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.22);
+}
+
+.loc-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* Location label */
+
+.loc-tag {
+  position: absolute;
+
+  left: 26px;
+  bottom: 26px;
+
+  z-index: 2;
+
+  background: rgba(15, 14, 10, 0.82);
+  color: #fff;
+
+  font-family: 'IBM Plex Mono', monospace;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   NORMAL LAPTOP
+   1100px — 1399px
+   ========================================================= */
+
+@media (max-width: 1399px) and (min-width: 1101px) {
+
+  .loc-carousel {
+    gap: 26px;
+  }
+
+  .loc-card {
+    flex-basis: 680px;
+    width: 680px;
+    height: 430px;
+
+    border-radius: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   KEEPING YOUR PREVIOUS SIZE
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+  .loc-carousel {
+    gap: 22px;
+  }
+
+  .loc-card {
+    flex-basis: 500px;
+    width: 500px;
+    height: 330px;
+
+    border-radius: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) and (min-width: 641px) {
+
+  .loc-carousel {
+    gap: 20px;
+  }
+
+  .loc-card {
+    flex-basis: 460px;
+    width: 460px;
+    height: 305px;
+
+    border-radius: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .loc-carousel {
+    gap: 16px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .loc-card {
+    flex-basis: 310px;
+    width: 310px;
+    height: 210px;
+
+    border-radius: 16px;
+  }
+
+  .loc-tag {
+    left: 14px;
+    bottom: 14px;
+
+    font-size: 11px;
+    padding: 8px 13px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .loc-card {
+    flex-basis: 285px;
+    width: 285px;
+    height: 195px;
+  }
+
+}
+
+
+/* =========================================================
+   LOCATIONS CAROUSEL
+   ========================================================= */
+
+.loc-carousel-wrap {
+  position: relative;
+  width: 100%;
+}
+
+
+/* Carousel */
+
+.loc-carousel {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  padding: 10px 5px 22px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.loc-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   LOCATION CARD
+   ========================================================= */
+
+.loc-card {
+  position: relative;
+
+  flex: 0 0 680px;
+  width: 680px;
+  height: 430px;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  background: #111;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.loc-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+
+/* Image overlay */
+
+.loc-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.25) 42%,
+    rgba(0, 0, 0, 0.02) 75%
+  );
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.loc-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.20);
+}
+
+.loc-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LOCATION LABEL
+   ========================================================= */
+
+.loc-tag {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  z-index: 2;
+
+  background: rgba(15, 14, 10, 0.82);
+  color: #fff;
+
+  font-family: 'IBM Plex Mono', monospace;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  padding: 10px 17px;
+
+  border-radius: 999px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   LEFT / RIGHT CAROUSEL BUTTONS
+   ========================================================= */
+
+.loc-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(15, 14, 10, 0.72);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.loc-arrow svg {
+  width: 21px;
+  height: 21px;
+}
+
+.loc-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+
+/* Button positions */
+
+.loc-arrow-left {
+  left: 18px;
+}
+
+.loc-arrow-right {
+  right: 18px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1399px) and (min-width: 1101px) {
+
+  .loc-card {
+    flex-basis: 600px;
+    width: 600px;
+    height: 380px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+  .loc-card {
+    flex-basis: 500px;
+    width: 500px;
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) and (min-width: 641px) {
+
+  .loc-card {
+    flex-basis: 460px;
+    width: 460px;
+    height: 305px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .loc-carousel {
+    gap: 16px;
+  }
+
+  .loc-card {
+    flex-basis: 310px;
+    width: 310px;
+    height: 210px;
+
+    border-radius: 16px;
+  }
+
+  .loc-tag {
+    left: 14px;
+    bottom: 14px;
+
+    font-size: 11px;
+    padding: 8px 13px;
+  }
+
+  .loc-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loc-arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .loc-arrow-left {
+    left: 8px;
+  }
+
+  .loc-arrow-right {
+    right: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .loc-card {
+    flex-basis: 285px;
+    width: 285px;
+    height: 195px;
+  }
+
+}
+
+
 /* ---------- stats ---------- */
 .stats{background:var(--green); border-top:3px solid var(--red);}
 .stats .wrap{display:grid; grid-template-columns:repeat(4,1fr);}
